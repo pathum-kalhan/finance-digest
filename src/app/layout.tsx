@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Rubik } from "next/font/google";
 import "./globals.css";
 
-import { BolttLogo } from "@/components/header/bolt-logo";
+import { BlottLogo } from "@/components/header/blott-logo";
 import { Title } from "@/components/header/title";
 
 const geistSans = Geist({
@@ -37,7 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable}
          antialiased`}
       >
-        <BolttLogo />
+        <BlottLogo />
         <Title />
         {children}
       </body>

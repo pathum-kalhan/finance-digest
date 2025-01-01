@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { NewsItem } from "./news-card.types";
 import Image from "next/image";
 import Link from "next/link";
+import formatUnixTimestamp from "@/lib/formatDate";
 
 export const NewsCard: FC<NewsItem> = (newsItem) => {
   const { image, source, datetime, headline, url } = newsItem;
@@ -21,7 +22,7 @@ export const NewsCard: FC<NewsItem> = (newsItem) => {
         <div className="flex-1 ml-4 sm:ml-0">
           <div className="font-normal text-xs uppercase text-white text-opacity-70 flex justify-between mb-2 sm:my-2">
             <p>{source}</p>
-            <p>{datetime}</p>
+            <p>{formatUnixTimestamp(datetime)}</p>
           </div>
           <div>
             <p className="font-medium text-xl">{headline}</p>
