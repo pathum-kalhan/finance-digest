@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
-export const Header: FC = () => {
+import Boltt from "./blott-logo.svg";
+export const BolttLogo: FC = () => {
   return (
     <header
       className="text-center sm:pt-6 pt-[21px]
@@ -8,12 +9,11 @@ export const Header: FC = () => {
     >
       <div className="relative sm:h-12 h-[30px]">
         <Image
-          src="/blott-logo.svg"
+          src={Boltt}
           alt="boltt-logo"
-          style={{
-            objectFit: "contain",
-          }}
+          sizes="(max-width: 640px) 33vw, 25vw"
           fill
+          className="object-contain"
         />
       </div>
     </header>

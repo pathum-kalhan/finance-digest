@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Rubik } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/header/header";
-import { NewsContainerTitle } from "@/components/news-container/news-container-title";
+
+import { BolttLogo } from "@/components/header/bolt-logo";
+import { Title } from "@/components/header/title";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,8 +37,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable}
          antialiased`}
       >
-        <Header />
-        <NewsContainerTitle />
+        <BolttLogo />
+        <Title />
         {children}
       </body>
     </html>
